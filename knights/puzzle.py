@@ -14,7 +14,7 @@ CKnave = Symbol("C is a Knave")
 knowledge0 = And(
     Or(AKnight,AKnave),
     Not(And(AKnight,AKnave)),
-    
+
     Biconditional(AKnight,And(AKnight,AKnave))
 )
 
@@ -24,10 +24,10 @@ knowledge0 = And(
 knowledge1 = And(
     Or(AKnight,AKnave),
     Not(And(AKnight,AKnave)),
-    
+
     Or(BKnight,BKnave),
     Not(And(BKnight,BKnave)),
-    
+
     Biconditional(AKnight,And(AKnave,BKnave))
 )
 
@@ -37,10 +37,10 @@ knowledge1 = And(
 knowledge2 = And(
     Or(AKnight,AKnave),
     Not(And(AKnight,AKnave)),
-    
+
     Or(BKnight,BKnave),
     Not(And(BKnight,BKnave)),
-    
+
     Biconditional(AKnight,Or(And(AKnight,BKnight),And(AKnave,BKnave))),
     Biconditional(BKnight,Or(And(AKnight,BKnave),And(AKnave,BKnight)))
 )
@@ -53,13 +53,13 @@ knowledge2 = And(
 knowledge3 = And(
     Or(AKnight,AKnave),
     Not(And(AKnight,AKnave)),
-    
+
     Or(BKnight,BKnave),
     Not(And(BKnight,BKnave)),
-    
+
     Or(CKnight,CKnave),
     Not(And(CKnight,CKnave)),
-    
+
     Biconditional(AKnight,And(Or(AKnight,AKnave),
                     Not(And(AKnight,AKnave)))),
     Biconditional(BKnight,CKnave),
